@@ -1,0 +1,126 @@
+<html>
+<style>
+#jam,#menit,#detik{
+width:50px;
+}
+div{
+display:inline-block;
+}
+#tabel{
+border:100%;
+}
+#btn,#btn2{
+color:white;
+background:red;
+}
+</style>
+  <head>
+    <title></title>
+  </head>
+<body align="center">
+<h1>STOPWATCH</h1>
+<div id="tabel">
+<div><input type="number" id="jam" value="0"><sub>JAM</sub></div>
+<div><input type="number" id="menit" value="0"><sub>MENIT</sub></div>
+<div><input type="number" id="detik" value="0" onkeyup="foc()"><sub>DETIK</sub></div>
+</div>
+<input type="number" id="sec">Per detik<br>
+<input type="button" id="btn" onclick="time()" value="RUN">
+<input type="button" id="btn2" onclick="resetValue()" value="RESET">
+</body>
+<script>
+function handrawan(){
+this.initA=document.querySelector("#initX");
+this.btnA=document.querySelector("#btn");
+this.btnB=document.querySelector("#btn2"); 
+this.detik=document.querySelector("#detik");
+this.menit=document.querySelector("#menit");
+this.jam=document.querySelector("#jam");
+this.xDetik=Number(detik.value);
+this.xMenit=Number(menit.value);
+this.xJam=Number(jam.value);
+}
+function time(){
+handrawan();
+this.booleans=true;
+this.initC=setInterval(up,1000);
+function up(){
+booleans=false;
+if(xDetik==0){
+if(xMenit==0){
+if(xJam==0){
+clearInterval(initC);
+unlock();
+btnA.value="RUN";
+}else{
+xJam=xJam-1;
+xMenit=60;
+}
+}else{
+xMenit=xMenit-1;
+xDetik=60;
+}
+}else{
+xDetik--;
+btnA.value="STOP";
+btnA.setAttribute("onclick","setValue()");
+jam.value=xJam;
+menit.value=xMenit;
+detik.value=xDetik;
+lock();
+}
+
+}
+}
+function setValue(){
+handrawan();
+clearInterval(initC);
+unlock();
+btnA.value="RUN";
+btnA.setAttribute("onclick","time()");
+}
+function resetValue(){
+handrawan();
+jam.value=0;menit.value=0;detik.value=0;
+}
+function lock(){
+handrawan();
+jam.disabled=true;
+menit.disabled=true;
+detik.disabled=true;
+btnB.disabled=true;
+}
+function unlock(){
+handrawan();
+jam.disabled=false;
+menit.disabled=false;
+detik.disabled=false;
+btnB.disabled=false;
+}
+function foc(){
+handrawan();
+if(detik>=60){
+alert("Maaf nilai tidak boleh lebih dari 60");
+}
+}
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

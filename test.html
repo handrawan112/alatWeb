@@ -1,0 +1,394 @@
+<html>
+<meta name="viewport" content="device=width-device, device=height-device, initial-scale=1.0">
+<style>
+body{
+background:green;
+}
+#tag{
+width:100%;
+height:80%;
+background:black;
+position:relative;
+}
+#tank{
+width:13px;
+height:13px;
+left:45%;
+top:95%;
+background:white;
+position:absolute;
+transition:2s;
+}
+#peluru{
+left:47%;
+width:10px;
+height:10px;
+background:none;
+position:absolute;
+}
+input{
+font-size:30pt;
+}
+#musuh{
+width:10px;
+height:10px;
+background:red;
+position:absolute;
+}
+#score,#sb{
+text-align:right;
+color:white;
+}
+#init1{
+text-align:center;
+}
+#papan{
+width:100%;
+height:auto;
+background:none;
+position:relative;
+}
+#tbh{
+width:auto;
+height:50px;
+position:absolute;
+left:0%;
+}
+#hbt{
+width:auto;
+height:50px;
+position:absolute;
+left:18%;
+}
+#btn{
+width:auto;
+height:auto;
+background:none;
+position:absolute;
+}
+#btn2{
+width:auto;
+height:auto;
+left:80%;
+position:absolute;
+}
+#shot{
+font:30%;
+background:black;
+color:white;
+border-radius:2em 2em 2em;
+}
+#msg{
+width:0%;
+height:auto;
+top:50%;
+background:white;
+position:absolute;
+}
+#ran{
+left:50%;
+position:absolute;
+}
+</style>
+  <head>
+    <title></title>
+  </head>
+<body>
+<div id="papan"><div style="display:block" id="ran"></div><div onclick="defX('Byte')" id="tbh"></div><div id="hbt" onclick="defX('Kordinat')"></div><div id="score" onclick="defX('Point')">Point : 0</div></div>
+<div id="tag"><div id="msg"></div><div id="hbt"></div><div id="musuh"></div><div id="peluru"></div><div id="tank"></div></div>
+<div id="init1">
+<div id="btn2" onclick="defX('Game Box Focus')">Box Focus</div>
+<div id="btn" onclick="defX('Rekor')">Rekor : 0</div>
+<input type="button" id="shot" value="RUN" onclick="tembak()">
+<p style="display:none" id="fgh"></p><span id="if"></span>
+</div>
+</body>
+<script>
+var wlebar=45;
+var wlebar2=2;
+var kec=0;
+function defX(xDef){
+alert(xDef);
+}
+function unlock(){
+this.ja;
+kec=100;
+var kunci=60;
+var tkun=document.querySelector("#score");
+var kmid=setInterval(lock,kec);
+function lock(){
+if(kunci===0){
+clearInterval(kmid);
+this.jplus=10;
+kesempatan();
+vReload();
+scor=0;
+scoreGood=0;
+scoreBad=0;
+tkun.innerHTML="Point anda : "+scor;
+}else{
+kunci--;
+ja.innerHTML=kunci;
+message();
+if(scor>=elements){
+rekors();
+}else{
+
+}
+
+}
+
+}
+}
+function lab(ex){
+this.bon=Math.ceil(Math.random()*ex);
+}
+function bonus(){
+try{
+num;
+if(jplus<=10){
+num=10;
+}else if(jplus<=20){
+num=20;
+}else if(jplus<=30){
+num=30;
+}else if(jplus<=40){
+num=40;
+}else if(jplus<=50){
+num=50;
+}else if(jplus<=60){
+num=60;
+}else if(jplus<=70){
+num=70;
+}else if(jplus<=80){
+num=80;
+}else if(jplus<=90){
+num=90;
+}else if(jplus<=100){
+num=100;
+}
+lab(num);
+bonusX();
+function bonusX(){
+if(jplus===bon){
+
+document.getElementById("ran").innerHTML=bon;
+}else{
+document.getElementById("ran").innerHTML=bon;
+}
+}
+}catch(e){
+alert(e);
+}
+}
+function jackpot(){
+plusJackpot();
+kesempatan();
+}
+function plusJackpot(){
+return jplus += 5;
+}
+var num=0;
+function reload(){
+this.skorsX=document.querySelector("#score");
+this.kshot=cshot;
+this.rma=rmwidth;
+this.rma2=rmwidth2;
+document.querySelector("#fgh").innerHTML=" X "+rma+"°"+" Y "+rma2+"°"+" Missile Cords "+wlebar+"°";
+if(wlebar===rma||wlebar-3===rma||wlebar-2===rma||wlebar-1===rma|| wlebar+1===rma|| wlebar+2===rma|| wlebar===rma2||wlebar+1===rma2||wlebar+2===rma2||wlebar+3===rma2|| wlebar-1===rma2|| wlebar-2===rma2|| wlebar-3===rma2 ){
+goodScore();
+if(jplus===0){
+kJplus();
+}else{
+skorsX.innerHTML="Point  : "+scores();
+plusK();
+kesempatan();
+vReload();
+}
+}else{
+kMin();
+badScore();
+}
+}
+function vReload(){
+if(jplus===0){
+kJplus();
+}else{
+this.kshot;
+kshot.value="Reload";
+kshot.setAttribute("onclick","assign()");
+bonus();
+}
+}
+function assign(){
+this.kshot;
+cKec();
+kshot.value="RUN";
+kshot.setAttribute("onclick","tembak()");
+}
+var jplus=1;
+function minK(){
+return jplus -=1;
+}
+function plusK(){
+return jplus +=1;
+}
+function kJplus(){
+this.kshot;
+kshot.value="Game Over !!";
+kshot.setAttribute("onclick","");
+unlock();
+}
+function kMin(){
+if(jplus===0){
+kJplus();
+}else{
+minK();
+vReload();
+kesempatan();
+}
+}
+function kesempatan(){
+this.ja=document.querySelector("#tbh");
+ja.innerHTML="$ : "+jplus;
+}
+kesempatan();
+var elements=0;
+function rekors(){
+var mrekor=document.querySelector("#btn");
+this.elements=scor;
+if(scor>=elements){
+mrekor.innerHTML="Rekor   : "+scor;
+}else{
+mrekor.innerHTML="Rekor   : "+elements;
+}
+}
+function message(){
+var bsg=document.querySelector("#msg");
+bsg.style.width="100%";
+var jid=5;
+var string="Perfect  : "+scoreGood+" Miss  : "+scoreBad;
+var bid=setInterval(ega,10);
+function ega(){
+if(jid===0){
+clearInterval(bid);
+bsg.style.width="0%";
+bsg.display="none";
+}else{
+jid--;
+bsg.style.opacity=jid;
+bsg.innerHTML=string;
+bsg.style.textAlign="center";
+}
+}
+}
+function tembak(){
+var b=document.querySelector("#peluru");
+this.cshot=document.querySelector("#shot");
+this.wid=100;
+this.rid=setInterval(run,10);
+this.dh;
+function run(){
+if(wid===0){
+clearInterval(rid);
+clearInterval(rmid);
+b.style.background="red";
+cshot.value="RUN";
+reload();
+cshot.disabled=false;
+b.style.top="100%";
+b.style.background="none";
+dh.style.display="block";
+}else{
+wid--;
+b.style.top=wid+"%";
+b.style.background="white";
+cshot.disabled=true;
+cshot.value="SHOT";
+b.style.height=wid+2+"%";
+}
+}
+}
+var scor=0;
+var scoreGood=0;
+var scoreBad=0;
+function scores(){
+return scor +=1;
+}
+function goodScore(){
+return scoreGood +=1;
+}
+function badScore(){
+return  scoreBad += 1;
+}
+function runMusuh(dfe){
+this.rm=document.querySelector("#musuh");
+this.rmwidth=0;
+this.rmwidth2=90;
+this.dh=document.querySelector("#papan");
+this.rmid=setInterval(musuhRun,dfe);
+function musuhRun(){
+dh.style.display="none";
+if(rmwidth===90){
+if(rmwidth2===0){
+clearInterval(rmid);
+cKec();
+}else{
+rmwidth2--;
+rm.style.left=rmwidth2+2+"%";
+}
+}else{
+rmwidth++;
+rm.style.left=rmwidth+2+"%";
+if(rmwidth===10){
+
+}
+}
+document.querySelector("#hbt").innerHTML=" X "+rmwidth+" Y "+rmwidth2;
+}
+}
+function cKec(){
+try{
+this.kec;
+if(jplus<=10){
+kec=100;
+}else if(jplus<=20){
+kec=60;
+}else if(jplus<=30){
+kec=80;
+}else if(jplus<=40){
+kec=40;
+}else if(jplus<=50){
+kec=60;
+}else if(jplus<=60){
+kec=20;
+}else if(jplus<=70){
+kec=40;
+}else if(jplus<=80){
+kec=3;
+}else if(jplus<=90){
+kec=2;
+}else if(jplus<=100){
+kec=1;
+}
+runMusuh(kec);
+}catch(e){
+alert(e);
+}
+}
+cKec();
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
